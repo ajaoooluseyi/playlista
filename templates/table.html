@@ -1,0 +1,39 @@
+{% extends 'camp.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="form">
+  <h1  style = "text-align: center">playlista</h1>
+  <h2  style = "text-align:center"> make a playlist </h2>
+  <table class="table">
+    <tr>
+      <th>Song Title</th>
+      <th>Artiste</th>
+      <th>Rated</th>
+      <th>added on</th>
+      <th>Edit</th>
+    </tr>
+    {% for track in tracks %}
+      <tr>
+        <td>{{ track.songtitle }}</td>
+        <td>{{ track.artiste }}</td>
+        <td>{{ track.rating }}</td>
+        <td>{{ track.date_created.date() }}</td>
+        <td>
+          <a href="/delete/{{ track.id }}">Delete</a>
+          <br>
+          <a href="/update/{{ track.id }}">Update</a>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+  <br>
+  <br>
+  <a href="/" class="button">Add Track</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'camp.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="update">
+  <h1>Update Track </h1>
+  <p></p>
+  <form action="/update/{{ track.id }}" method="post">
+    <label for="songtitle">Song Title:</label> <br>
+    <input style="text-align: center" type="text" name="tent" id="content" value="{{ track.songtitle }}">
+    <p></p>
+    <label for="artiste"> Artiste: </label> <br>
+    <input style = "text-align: center" type="text" name="tiste" id="artiste" value="{{ track.artiste }}">
+    <p></p>
+    <label for="rating"> You rate this as:</label> <br>
+
+    <input type="radio" id="onestar" name="ting" value="NOPE"
+    {% if  track.rating=="NOPE"  %}
+       checked
+    {% endif  %}>
+    <label for="onestar">nope</label> <br>
+
+    <input type="radio" id="twostar" name="ting" value="MEH"
+    {% if  track.rating=="MEH"  %}
+       checked
+    {% endif  %}>
+    <label for="twostar">meh</label> <br>
+
+    <input type="radio" id="threestar" name="ting" value="OKAY!"
+    {% if  track.rating=="OKAY!"  %}
+       checked
+    {% endif  %}>
+    <label for="threestar">okay!</label> <br>
+
+    <input type="radio" id="fourstar" name="ting" value="YEAH!"
+    {% if  track.rating=="YEAH!"  %}
+       checked
+    {% endif  %}>
+    <label for="fourstar">yeah!</label> <br>
+
+    <input type="radio" id="fivestar" name="ting" value="FIRE"
+    {% if  track.rating=="FIRE"  %}
+       checked
+    {% endif  %}>
+    <label for="fivestar">fireeeee</label> <br>
+
+    <input type="submit" value="Update track">
+
+
+  </form>
+
+</div>
+
+
+{% endblock %}

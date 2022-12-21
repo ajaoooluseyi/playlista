@@ -1,0 +1,40 @@
+{% extends 'camp.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body%}
+<div class='hero is-primary'>
+  <h1  style = "text-align: center">playlista</h1>
+  <p></p>
+  <h2 style = "text-align:center"> make a playlist </h2>
+</div>
+<div class="form">
+  <form action="/" method="post">
+    <label for="title">Song Title:</label> <br>
+    <input style="text-align: center" required type="text" name="title" id="title">
+    <p></p>
+    <label for="artiste"> Artiste: </label> <br>
+    <input style = "text-align: center" required type="text" name="artiste" id="artiste" >
+    <p></p>
+    <label for="rating"> You rate this as:</label> <br>
+    <input type="radio" id="onestar" name="rating" value="NOPE">
+    <label for="onestar">nope</label> <br>
+    <input type="radio" id="twostar" name="rating" value="MEH">
+    <label for="twostar">meh</label> <br>
+    <input type="radio" id="threestar" name="rating" value="OKAY!">
+    <label for="threestar">okay!</label> <br>
+    <input type="radio" id="fourstar" name="rating" value="YEAH!">
+    <label for="fourstar">yeah!</label> <br>
+    <input type="radio" id="fivestar" name="rating" value="FIRE">
+    <label for="fivestar">fireeeee</label> <br>
+    <input type="submit" value="Add track">
+    <p></p>
+    <p></p>
+    <a href="/table" style="text-align: left"> go to playlist </a>
+  </form>
+
+</div>
+
+{% endblock %}

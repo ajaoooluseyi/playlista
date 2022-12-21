@@ -1,0 +1,27 @@
+take song title, artiste name and song rating
+return table of data, with date and time included
+add as many other fns come to mind
+
+{% extends 'camp.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body%}
+
+{% endblock %}
+
+
+work on .py file
+add class and define functions
+
+stpd at defining welcome fn
+make consequent changes to welcome
+define other fns
+make playlist open on separate page
+fix td on new column ish
+make update work
+make update work well
+put direct link to table in homepage,
+ not button just words that
